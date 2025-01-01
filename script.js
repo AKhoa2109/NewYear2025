@@ -94,3 +94,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.body.addEventListener("click", enableAudio);
 });
+
+// Vẽ các con vật (đơn giản hóa bằng hình học)
