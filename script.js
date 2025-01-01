@@ -70,3 +70,27 @@ setInterval(() => {
 }, 500); // Bắn pháo hoa mỗi 500ms
 
 animate();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("background-music");
+  const overlay = document.getElementById("audio-overlay");
+
+  const enableAudio = () => {
+    audio
+      .play()
+      .then(() => {
+        console.log("Âm thanh bắt đầu phát.");
+      })
+      .catch((error) => {
+        console.log("Lỗi phát âm thanh:", error);
+      });
+
+    // Ẩn lớp phủ
+    overlay.style.display = "none";
+
+    // Xóa sự kiện click
+    document.body.removeEventListener("click", enableAudio);
+  };
+
+  document.body.addEventListener("click", enableAudio);
+});
