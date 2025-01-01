@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  overflow: hidden;
+  font-family: "Great Vibes", cursive;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+#fireworks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.year-text {
+  color: gold;
+  font-size: 5rem;
+  text-shadow: 0 0 20px #ff9900, 0 0 40px #ff6600;
+}
+
+.flower {
+  width: 100px;
+  position: absolute;
+  animation: float 3s ease-in-out infinite;
+}
+
+.mai {
+  bottom: 10%;
+  left: 20%;
+}
+
+.dao {
+  top: 10%;
+  right: 20%;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
